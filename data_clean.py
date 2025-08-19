@@ -12,5 +12,6 @@ all_files = pd.concat([file_0, file_1, file_2])
 filtered_data = all_files.loc[all_files['product'] == "pink morsel"]
 filtered_data['sales'] = filtered_data['quantity'] * filtered_data['price'].str.removeprefix('$').astype(float)
 
-cleaned_data = filtered_data.drop(['quantity', 'price'], axis=1)
-cleaned_data.to_csv('./data/cleaned_sales.csv')
+cleaned_data = filtered_data.drop(['product', 'quantity', 'price'], axis=1)
+
+cleaned_data.to_csv('./data/pink_morsel_sales.csv', index=False)
