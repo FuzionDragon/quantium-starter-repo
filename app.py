@@ -19,7 +19,11 @@ app.layout = html.Div(children=[
     dcc.Graph(
         id='sales-trend-graph',
         figure=fig
-    )
+    ),
+
+    html.Div(children='''
+    Based on the graph, it is obvious to see that the price increase from the 15th of January 2021 onwards shows an drastic increase in sales.
+    ''')
 ])
 
 if __name__ == '__main__':
