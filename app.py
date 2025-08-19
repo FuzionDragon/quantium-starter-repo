@@ -5,8 +5,9 @@ import pandas as pd
 app = Dash()
 
 data = pd.read_csv('./data/pink_morsel_sales.csv')
+data = data.rename(columns={'date': 'Date', 'sales': 'Sales', 'region': 'Region'})
 
-fig = px.line(data, x="date", y="sales", color="region") 
+fig = px.line(data, x="Date", y="Sales", color="Region") 
 
 app.layout = html.Div(children=[
     html.H1(children='Pink Morsel Sales Trend'),
