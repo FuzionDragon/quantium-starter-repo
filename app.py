@@ -16,7 +16,7 @@ colors = {
 
 app.layout = html.Div(style={'backgroundColor': colors['background'], 'color': colors['text']},
   children=[
-  html.H1(children='Pink Morsel Sales Trend', style={'textAlign': 'center'}),
+  html.H1(children='Pink Morsel Sales Trend', style={'textAlign': 'center'}, id="header"),
 
   html.Div(children='Price increase to pink morsels happen on the 15th of January 2021', style={'textAlign': 'center'}),
 
@@ -56,4 +56,3 @@ def update_figure(selected_region):
 
 if __name__ == '__main__':
     app.run(debug=True)
-
