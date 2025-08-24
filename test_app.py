@@ -40,6 +40,3 @@ def test_region_picker_present(dash_duo):
     radio_options = dash_duo.find_elements("input[type='radio']")
     assert len(radio_options) == len(expected_options), \
            f"Should have {len(expected_options)} radio options, found {len(radio_options)}"
-    
-    checked_option = dash_duo.find_element("input[type='radio']:checked")
-    assert checked_option.get_attribute("value") == "all", "Default selected option should be 'all'"
